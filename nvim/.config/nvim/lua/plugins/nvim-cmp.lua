@@ -37,6 +37,7 @@ return {
       -- Configure <TAB> like in VSCode
       -- This is reaaaally not easy to setup :D
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
+        ["<CR>"] = cmp.config.disable,
         ["<Tab>"] = cmp.mapping(function(fallback)
           -- If it's a snippet then jump between fields
           if luasnip.expand_or_jumpable() then
