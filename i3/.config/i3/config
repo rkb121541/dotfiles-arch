@@ -16,7 +16,7 @@ exec --no-startup-id picom
 
 exec --no-startup-id xinput set-prop "ELAN0406:00 04F3:30A6 Touchpad" "libinput Tapping Enabled" 1
 
-exec --no-startup-id xrandr -r 120
+# exec --no-startup-id xrandr -r 120
 exec --no-startup-id redshift -O 3700
 
 exec_always --no-startup-id autotiling
@@ -226,4 +226,5 @@ gaps outer 0
  
 
 exec_always ~/.config/polybar/launch.sh &
-exec_always feh --bg-fill ~/Downloads/i3-wallpaper.jpeg
+exec_always feh --bg-fill ~/Downloads/i3-wallpaper.jpeg &
+exec_always ~/.config/monitor-config.sh
