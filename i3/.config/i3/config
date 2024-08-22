@@ -201,8 +201,8 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +1%
+bindsym XF86MonBrightnessDown exec brightnessctl set 1%-
 
 set $bg #282828
 set $red #cc241d
@@ -224,7 +224,6 @@ client.urgent           $gray $gray $bg $bg $bg
 gaps inner 4
 gaps outer 0
  
-
+exec_always ~/.config/monitor-config.sh &
 exec_always ~/.config/polybar/launch.sh &
-exec_always feh --bg-fill ~/Downloads/i3-wallpaper.jpeg &
-exec_always ~/.config/monitor-config.sh
+exec_always feh --bg-fill ~/Downloads/i3-wallpaper.jpeg

@@ -19,3 +19,5 @@ setopt hist_find_no_dups
 # Aliases
 alias ls="ls --color"
 alias l="ls -la --color"
+
+eval "$(zoxide init zsh)"
