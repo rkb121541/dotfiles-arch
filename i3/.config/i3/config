@@ -71,7 +71,8 @@ bindsym $mod+q kill
 # A more modern dmenu replacement is rofi:
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+space exec --no-startup-id rofi -show combi
-bindsym $mod+x exec --no-startup-id ~/.config/rofi/powermenu
+bindsym $mod+Shift+e exec --no-startup-id ~/.config/rofi/scripts/powermenu
+bindsym $mod+Shift+b exec --no-startup-id ~/.config/rofi/scripts/bluetoothmenu
 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
@@ -169,7 +170,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -204,8 +205,10 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +1%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 1%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym Ctrl+XF86MonBrightnessUp exec --no-startup-id brightnessctl set +20%
+bindsym Ctrl+XF86MonBrightnessDown exec --no-startup-id brightnessctl set 0%
 
 set $bg #282828
 set $red #cc241d

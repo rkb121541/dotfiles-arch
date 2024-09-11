@@ -1,0 +1,11 @@
+#! /bin/sh
+
+chosen=$(printf "Bluetooth On\nBluetooth Off\nConnect Bose QC35 II\nDisconnect Bose QC35 II" | rofi -dmenu -i -theme-str '@import "config.rasi"')
+
+case "$chosen" in
+"Bluetooth On") bluetoothctl power on ;;
+"Bluetooth Off") bluetoothctl power off && pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo ;;
+"Connect Bose QC35 II") bluetoothctl connect 60:AB:D2:3D:12:44 && pactl set-default-sink bluez_output.60_AB_D2_3D_12_44.1 ;;
+"Disconnect Bose QC35 II") bluetoothctl disconnect 60:AB:D2:3D:12:44 && pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo ;;
+*) exit 1 ;;
+esac
