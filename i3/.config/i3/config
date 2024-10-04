@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 
 set $mod Mod4
 exec --no-startup-id picom -b
@@ -62,6 +62,10 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+b exec --no-startup-id google-chrome-stable
+bindsym $mod+c exec --no-startup-id code
+bindsym $mod+o exec --no-startup-id obsidian
+bindsym $mod+y exec --no-startup-id yazi
 
 # kill focused window
 bindsym $mod+q kill
@@ -208,7 +212,7 @@ bindsym $mod+r mode "resize"
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +2%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 2%-
 bindsym Ctrl+XF86MonBrightnessUp exec --no-startup-id brightnessctl set +20%
-bindsym Ctrl+XF86MonBrightnessDown exec --no-startup-id brightnessctl set 0%
+bindsym Ctrl+XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%
 
 set $bg #282828
 set $red #cc241d
@@ -227,13 +231,13 @@ client.focused_inactive $bg $bg $lightgray $bg $bg
 client.unfocused        $bg $bg $lightgray $bg $bg
 client.urgent           $gray $gray $bg $bg $bg
 
-gaps inner 4
+gaps inner 8
 gaps outer 0
-gaps top -4
+gaps top -8
 
 exec_always --no-startup-id ~/.config/monitor-config.sh &
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
-exec_always --no-startup-id feh --bg-fill ~/Downloads/i3-wallpaper.jpeg &
+exec_always --no-startup-id feh --bg-fill ~/Pictures/i3wallpaper.jpg &
 
 # Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date)"

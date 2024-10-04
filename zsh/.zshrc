@@ -1,5 +1,5 @@
 alias open="xdg-open"
-
+alias matrix="unimatrix"
 eval "$(starship init zsh)"
 source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh

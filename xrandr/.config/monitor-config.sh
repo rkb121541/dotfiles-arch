@@ -6,7 +6,7 @@ external=HDMI-1-1
 function activatehdmi {
   xrandr --output "$internal" --auto --output "$external" --auto --right-of "$internal"
   xrandr --output "$internal" --mode 1920x1080 --rate 120
-  xrandr --output "$external" --mode 1920x1080 --rate 60
+  xrandr --output "$external" --mode 1920x1080 --rate 75
 }
 
 function deactivatehdmi {

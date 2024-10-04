@@ -6,6 +6,6 @@ case "$chosen" in
 "Shutdown") poweroff ;;
 "Restart") reboot ;;
 "Sleep") systemctl suspend ;;
-"Lock") betterlockscreen -l blur ;;
+"Lock") betterlockscreen -l ;;
 *) exit 1 ;;
 esac
