@@ -1,3 +1,14 @@
+local cmp = require("cmp")
+
+cmp.setup({
+  completion = {
+    autocomplete = false,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ["<C-Space>"] = cmp.mapping.complete(),
+  }),
+})
+
 -- nvim-cmp configs
 return {
   -- customize nvim-cmp configs
@@ -42,13 +53,13 @@ return {
           -- If it's a snippet then jump between fields
           if luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
-          -- otherwise if the completion pop is visible then complete
+            -- otherwise if the completion pop is visible then complete
           elseif cmp.visible() then
             cmp.confirm({ select = false })
-          -- if the popup is not visible then open the popup
+            -- if the popup is not visible then open the popup
           elseif has_words_before() then
             cmp.complete()
-          -- otherwise fallback
+            -- otherwise fallback
           else
             fallback()
           end
