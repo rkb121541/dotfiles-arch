@@ -237,7 +237,7 @@ gaps top -8
 
 exec_always --no-startup-id ~/.config/monitor-config.sh &
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
-exec_always --no-startup-id feh --bg-fill ~/Pictures/i3wallpaper.jpg &
+exec_always --no-startup-id feh --bg-fill ~/Pictures/backgrounds/i3wallpaper.jpg &
 
 # Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date)"
