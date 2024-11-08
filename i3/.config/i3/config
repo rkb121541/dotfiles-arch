@@ -65,7 +65,7 @@ bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+b exec --no-startup-id google-chrome-stable
 bindsym $mod+c exec --no-startup-id code
 bindsym $mod+o exec --no-startup-id obsidian
-bindsym $mod+y exec --no-startup-id yazi
+bindsym $mod+y exec --no-startup-id kitty -e yazi
 
 # kill focused window
 bindsym $mod+q kill
